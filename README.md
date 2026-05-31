@@ -132,9 +132,9 @@ La calibration doit etre realisee lorsque les IMUs sont deja fixes sur le corps.
 
 | Nombre d'IMUs | Placement conseille | Commandes disponibles |
 |---:|---|---|
-| 1 | dos uniquement, canal 2 `back` | avancer, reculer, tourner via le roll du dos |
-| 2 | dos + une epaule | avancer/reculer plus stables, tourner via le roll du dos |
-| 3 | dos + epaule gauche + epaule droite | configuration recommandee |
+| 1 | torse uniquement, canal 2 `back` | avancer, reculer, tourner via le roll du torse |
+| 2 | torse + une epaule | avancer/reculer plus stables, tourner via le roll du torse |
+| 3 | torse + epaule gauche + epaule droite | configuration recommandee |
 
 Orientations attendues au repos :
 
@@ -142,9 +142,9 @@ Orientations attendues au repos :
 |---|---|
 | epaule gauche, canal 0 | `x` vers l'avant, `y` vers la droite du corps, `z` vers le bas |
 | epaule droite, canal 1 | meme orientation que l'epaule gauche |
-| dos, canal 2 | `x` vers la droite du corps, `y` vers le haut, `z` vers l'arriere |
+| torse, canal 2 | `x` vers la droite du corps, `y` vers le haut, `z` vers l'arriere |
 
-Au repos, les epaules doivent mesurer environ `az = -1g`. Le capteur du dos doit mesurer environ `ay = +1g`.
+Au repos, les epaules doivent mesurer environ `az = -1g`. Le capteur du torse doit mesurer environ `ay = +1g`.
 
 ### 2. Connecter les deux Raspberry Pi au meme reseau
 
@@ -235,8 +235,8 @@ Dans le terminal du Pi4 humain :
 | Incliner le tronc vers l'avant | `AVANCER` | avance en vitesse 1 | incliner vers l'arriere -> `REPOS` |
 | Refaire `AVANCER` apres `REPOS` | `AVANCER` | passe en vitesse 2 cote robot | retour a `REPOS` |
 | Incliner le tronc vers l'arriere | `RECULER` | recule | incliner vers l'avant -> `REPOS` |
-| Incliner lateralement le dos vers la droite | `TOURNER_DROITE` | tourne a droite en avancant | incliner a gauche -> `REPOS` |
-| Incliner lateralement le dos vers la gauche | `TOURNER_GAUCHE` | tourne a gauche en avancant | incliner a droite -> `REPOS` |
+| Incliner lateralement le torse vers la droite | `TOURNER_DROITE` | tourne a droite en avancant | incliner a gauche -> `REPOS` |
+| Incliner lateralement le torse vers la gauche | `TOURNER_GAUCHE` | tourne a gauche en avancant | incliner a droite -> `REPOS` |
 | Revenir en position neutre | `REPOS` | arret et direction centree | aucune |
 | Obstacle detecte par ultrason | `ARRET_URGENCE` local robot | arret immediat | eloigner l'obstacle puis revenir a `REPOS` |
 
@@ -250,7 +250,7 @@ AVANCER -> REPOS -> AVANCER
 
 Le deuxieme `AVANCER` fait passer `main_pi4_robot.py` en `motor_state = 2`.
 
-Les rotations utilisent le `roll` relatif du dos, affiche dans le terminal sous le nom `Rotation dos roll`. Le yaw du dos reste calcule en interne, mais il n'est plus utilise pour declencher `TOURNER_DROITE` ou `TOURNER_GAUCHE`.
+Les rotations utilisent le `roll` relatif du torse, affiche dans le terminal sous le nom `Rotation torse roll`. Le yaw du torse reste calcule en interne, mais il n'est plus utilise pour declencher `TOURNER_DROITE` ou `TOURNER_GAUCHE`.
 
 ---
 
