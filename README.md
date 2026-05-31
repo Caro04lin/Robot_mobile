@@ -2,7 +2,10 @@
 
 Ce projet vise a commander un robot mobile a partir de gestes du corps mesures par des capteurs inertiels IMU avec un microphone pour l'arret d'urgence et un capteur ultrason pour la detection d'obstacle.
 
+Les commandes du robot mobile et de l'architecture techniques sont illustrés ci dessous.
 ![Schema du systeme](assets/Mouvement_commande.png)
+
+![Architecture](assets/Architecture.png)
 
 Le systeme est separe en deux Raspberry Pi 4 :
 
