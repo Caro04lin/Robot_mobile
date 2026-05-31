@@ -1,6 +1,9 @@
 # Systeme de controle IMU pour robot mobile
 
-Projet ICAM visant a commander un robot mobile a partir de gestes du corps mesures par des capteurs inertiels IMU.
+Ce projet vise a commander un robot mobile a partir de gestes du corps mesures par des capteurs inertiels IMU.
+
+Mouvements attendu et Commande du robot mobile :
+![Schema du systeme](assets/Mouvement_commande.png)
 
 Le systeme est separe en deux Raspberry Pi 4 :
 
