@@ -1,0 +1,6 @@
+# Pi4 robot: GPIO pour le capteur ultrason HC-SR04
+RPi.GPIO>=0.7.1,<1.0
+
+# Note:
+# Les modules motion.motor_controller et motion.servo_controller ne viennent
+# pas de pip. Ils sont fournis par l'environnement Adeept/SunFounder du robot.

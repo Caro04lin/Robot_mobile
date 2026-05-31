@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs and generated data
+*.log
+logs/
+imu_simulator/logs/
+
+# Local PC simulator, kept out of the public repository
+imu_simulator/
+
+# Local calibration/runtime files
+calibration_offsets.json
+icam_robot.log
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,8 @@
+# Pi4 humain: lecture IMU
+smbus2>=0.4.3,<1.0
+
+# Pi4 humain: commande vocale optionnelle
+vosk>=0.3.45,<1.0
+sounddevice>=0.4.6,<1.0
+numpy>=1.24,<3.0
+scipy>=1.10,<2.0

@@ -1,0 +1,7 @@
+# Installation complete, utile pour un environnement de developpement.
+# Sur Raspberry Pi, utiliser de preference:
+# - requirements_humain.txt sur le Pi4 humain
+# - requirements_robot.txt sur le Pi4 robot
+
+-r requirements_humain.txt
+-r requirements_robot.txt
